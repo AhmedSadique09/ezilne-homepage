@@ -1,0 +1,244 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Top Bar Styling */
+.top-bar {
+  background-color: #fafafa;
+  color: #000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-content span {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.right-content i {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #141414;
+  padding: 15px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.containernav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #d3d3d3;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 10px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+.highlight {
+  background-color: #ffc107;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background-color: #f59e0b;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+  background-color: #ffc107;
+}
+
+.search-icon i {
+  color: black;
+}
+
+/* Dynamic Search Icon */
+.search-icon i::before {
+  content: "\f002"; /* Default search icon (FontAwesome desktop) */
+  font-family: "FontAwesome";
+}
+
+@media (max-width: 768px) {
+  .search-icon i::before {
+    content: "\f10b"; /* Mobile search icon (FontAwesome phone) */
+  }
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.nav-links.hidden {
+  transform: translateX(100%);
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .containernav {
+    padding: 0 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.9em;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #141414;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    transform: translateX(100%);
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .highlight {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .left-content span {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .right-content i {
+    font-size: 16px;
+  }
+
+  .logo p {
+    font-size: 10px;
+  }
+
+  .search-icon {
+    padding: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.85em;
+  }
+}
