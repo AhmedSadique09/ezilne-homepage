@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <title>Eziline</title>
+</head>
+<body>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
-      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
-    <title>eziline</title>
-  </head>
-  <body>
-    <!--Top information Bar-->
-    <div class="top-bar">
-      <div class="left-content">
-        <span class="icon"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
-        <span class="text"
-          >Office 304-B Amna Plaza Near Radio Pakistan Peshawar Road
-          Rawalpindi</span>
-        <span><i class="fa-solid fa-phone"></i> +923212225212</span>
-        <span ><i class="fa-regular fa-envelope" style="color: #000000;"></i> info@eziline.com</span>
-      </div>
-      <div class="right-content">
-        <i class="fa-brands fa-facebook-f" style="color: #000000"></i>
-        <i class="fa-brands fa-linkedin-in" style="color: #000000"></i>
-        <i class="fa-brands fa-x-twitter" style="color: #000000"></i>
-        <i class="fa-brands fa-youtube" style="color: #000000"></i>
-      </div>
+  <!-- Top Information Bar -->
+  <div class="top-bar">
+    <div class="left-content">
+      <span><i class="fa-solid fa-location-dot"></i> Office 304-B Amna Plaza, Peshawar Road, Rawalpindi</span>
+      <span><i class="fa-solid fa-phone"></i> +923212225212</span>
+      <span><i class="fa-regular fa-envelope"></i> info@eziline.com</span>
     </div>
+    <div class="right-content">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-linkedin-in"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+  </div>
 
-    <!--NavBar-->
-    <header class="navbar">
-      <div class="containernav">
-        <div class="logo">
-          <h1>EZILINE</h1>
-          <p>Software House</p>
-        </div>
-        <button class="hamburger" id="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav class="nav-links" id="nav-links">
-          <a href="#">HOME</a>
-          <a href="#">SERVICES</a>
-          <a href="#">PORTFOLIO</a>
-          <a href="#">EZI UPDATES</a>
-          <a href="#">SOFTWARES</a>
-          <a href="#">LOGIN</a>
-          <a href="#">CONTACT</a>
-          <a href="#" class="highlight">16TH ANNIVERSARY</a>
-          <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #605c5cd8;"></i></a>
-        </nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-brand">
+      <span class="logo">EZLINE</span>
+      <span class="subtext">Software House</span>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Softwares</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="highlight">16th Anniversary</a></li>
+      </ul>
+      <button class="search-icon" id="searchIcon">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-bar-container" id="searchBarContainer">
+        <input type="text" placeholder="Search..." class="search-bar" />
       </div>
-    </header>
-    
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="Banner">
+  <div class="hero">
+    <h1>Welcome to Ezihost</h1>
+</div>
+<video class="video-bg" autoplay muted loop>
+    <source src="banner.mp4" type="video/mp4">
+</video>
+</div>
 
 
-  </body>
+
+</body>
 </html>

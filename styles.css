@@ -47,198 +47,224 @@ body {
 }
 
 /* Navbar Styling */
-.navbar {
-  background-color: #141414;
-  padding: 15px 0;
-  position: relative;
-  z-index: 10;
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.containernav {
+/* Navbar styles */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.logo h1 {
-  font-size: 24px;
-  margin: 0;
-  color: #fff;
-}
-
-.logo p {
-  font-size: 12px;
-  margin: 0;
-  color: #d3d3d3;
-}
-
-/* Nav Links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.3s ease;
-}
-
-.nav-links a {
+  background-color: #1a1a2e;
   color: white;
-  text-decoration: none;
-  font-size: 1em;
-  padding: 5px 10px;
-  margin: 0 10px;
-  transition: all 0.3s ease;
+  padding: 10px 20px;
   position: relative;
 }
 
-.nav-links a:hover {
-  color: #ffc107;
+.navbar-brand {
+  font-family: Arial, sans-serif;
 }
 
-.highlight {
-  background-color: #ffc107;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: white;
+.navbar-brand .logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  transition: all 0.3s ease;
 }
 
-.highlight:hover {
-  background-color: #f59e0b;
+.navbar-brand .subtext {
+  font-size: 0.8rem;
+  color: #d1d1d1;
 }
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start; /* Default alignment for items */
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links ul li {
+  margin-right: 20px; /* Added space between li elements */
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.nav-links ul li a:hover {
+  color: #f5a623;
+}
+
+.nav-links ul li a.highlight {
+  background-color: gold;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 12px;
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: none; /* Hidden by default */
+  position: absolute;
+  width: 100%;
+  top: 100%; /* Position search bar below the navbar */
+  left: 0;
+  padding: 10px 0;
+  background-color: #1a1a2e; /* Same color as navbar */
+}
+
+.search-bar {
+  width: 50%;
+  margin: 10px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #444; /* Set background color for the search bar */
+  color: white;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+/* Search Icon */
 .search-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: silver;
   border-radius: 50%;
-  padding: 10px;
+  padding: 7px;
   transition: all 0.3s ease;
 }
 
+/* Search Icon on hover */
 .search-icon:hover {
   background-color: #ffc107;
 }
 
+/* Search Icon inside container (ensure it’s centered and looks modern) */
 .search-icon i {
-  color: black;
+  font-size: 1rem; /* Increase icon size */
+  color: white;
+  transition: color 0.3s ease;
 }
 
-/* Dynamic Search Icon */
-.search-icon i::before {
-  content: "\f002"; /* Default search icon (FontAwesome desktop) */
-  font-family: "FontAwesome";
-}
-
-@media (max-width: 768px) {
-  .search-icon i::before {
-    content: "\f10b"; /* Mobile search icon (FontAwesome phone) */
-  }
-}
-
-/* Hamburger Button */
+/* Hamburger styles */
 .hamburger {
   display: none;
+  flex-direction: column;
+  gap: 4px;
   background: none;
   border: none;
-  font-size: 24px;
-  color: white;
   cursor: pointer;
 }
 
-/* Mobile Menu */
-.nav-links.hidden {
-  transform: translateX(100%);
-  display: none;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  display: block;
 }
 
-@media (max-width: 1024px) {
-  .containernav {
-    padding: 0 20px;
-  }
-
-  .nav-links a {
-    font-size: 0.9em;
-  }
-
-  .logo h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #141414;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    display: none;
-    transform: translateX(100%);
-  }
-
-  .nav-links a {
-    margin: 10px 0;
-    font-size: 1em;
-  }
-
-  .nav-links.show {
-    transform: translateX(0);
     display: flex;
   }
 
-  .logo h1 {
-    font-size: 18px;
-  }
-
-  .highlight {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  .top-bar {
-    flex-wrap: wrap;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 12px 0px 14px 0px;
+    top: 100%;
+    right: 0;
+    background-color: #1a1a2e;
+    width: 100%;
     text-align: center;
   }
 
-  .left-content span {
-    margin-right: 10px;
-    font-size: 12px;
+  .nav-links.active {
+    display: flex;
   }
 
-  .right-content i {
-    font-size: 16px;
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .logo p {
-    font-size: 10px;
-  }
-
+  /* Hide search icon on mobile */
   .search-icon {
-    padding: 8px;
+    display: none;
   }
 
-  .nav-links a {
-    font-size: 0.85em;
+  /* Display search bar on mobile */
+  .search-bar-container {
+    display: block; /* Show search bar */
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
+@media screen and (min-width: 769px) {
+  /* Keep the search icon visible on desktop */
+  .search-icon {
+    display: block; /* Show search icon */
+  }
+
+  /* Hide search bar on desktop */
+  .search-bar-container {
+    display: none;
+  }
+}
+
+/* Banner Style */
+
+.hero {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;
+  color: white;
+  margin: 0;              
+  padding: 0;             
+  position: relative;     
+  height: 100vh;          
+  z-index: 1;             
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;       
+}
+
+
