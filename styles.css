@@ -245,6 +245,12 @@ body, ul, li {
 
 /* Banner Style */
 
+
+.Banner{
+  height{
+    height: 403px;
+  }
+}
 .hero {
   display: flex;
   justify-content: center;
@@ -254,7 +260,7 @@ body, ul, li {
   margin: 0;
   padding: 0;
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 403px; /* Full viewport height */
   z-index: 1;
   font-size: 1.5rem; /* Adjust font size for readability */
 }
