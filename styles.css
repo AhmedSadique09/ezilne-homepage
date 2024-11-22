@@ -295,7 +295,8 @@ body, ul, li {
 
 .video-container {
   flex: 1;
-  margin-left: 20px; /* Adds space between the video and text */
+  margin-left: 100px; /* Adds space between the video and text */
+  padding-top: 40px;
   text-align: right; /* Aligns the video to the right */
 }
 
