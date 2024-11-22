@@ -245,10 +245,9 @@ body, ul, li {
 
 /* Banner Style */
 
-
 .Banner{
   height{
-    height: 403px;
+    height: 400px;
   }
 }
 .hero {
@@ -260,7 +259,7 @@ body, ul, li {
   margin: 0;
   padding: 0;
   position: relative;
-  height: 403px; /* Full viewport height */
+  height: 720px; /* Full viewport height */
   z-index: 1;
   font-size: 1.5rem; /* Adjust font size for readability */
 }
@@ -274,4 +273,98 @@ body, ul, li {
   object-fit: cover;
   z-index: -1;
 }
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #2d2d79, #f76d4b);
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left by default */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.video-container {
+  flex: 1;
+  margin-left: 20px; /* Adds space between the video and text */
+  text-align: right; /* Aligns the video to the right */
+}
+
+.video-container video {
+  max-width: 100%;
+  height: auto; /* Keeps the aspect ratio */
+}
+
+/* About Text Styling */
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text h1 .highlight {
+  color: #00ffff; /* Eziline logo color */
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.about-text li::before {
+  content: "⭐";
+  margin-right: 10px;
+  color: #ff9900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .video-container {
+    text-align: center; /* Center video on smaller screens */
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 28px;
+  }
+
+  .about-text li {
+    font-size: 16px;
+  }
+}
+
+
 
