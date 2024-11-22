@@ -243,7 +243,7 @@ body, ul, li {
   }
 }
 
-/* Banner Style */
+/* Banner Style Start Here */
 
 .Banner{
   height{
@@ -275,6 +275,7 @@ body, ul, li {
 }
 
 /* About Section Start Here */
+
 .about-section {
   padding: 50px 20px;
   font-family: Arial, sans-serif;
@@ -360,6 +361,140 @@ body, ul, li {
 
   .about-text li {
     font-size: 16px;
+  }
+}
+
+/* White Section Start here */
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between; /* Push sections to their respective sides */
+  align-items: flex-start; /* Aligns content to the top */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 40px; /* Space between sections */
+  box-sizing: border-box;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1; /* Allows the left section to grow/shrink */
+  max-width: 45%; /* Reduces the width slightly to allow more space */
+  margin-left: -50px; /* Moves the left section further left */
+}
+
+.screen-image img {
+  width: 100%;
+  max-width: 100%; /* Ensures the image scales properly */
+  height: auto;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Section */
+.right-section {
+  flex: 1; /* Allows the right section to grow/shrink */
+  max-width: 45%; /* Reduces the width slightly to allow more space */
+  margin-right: -50px; /* Moves the right section further right */
+  padding-left: 20px;
+}
+
+.right-section h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00c4cc;
+  display: inline-block;
+}
+
+.right-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-section ul li {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.right-section ul li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #ff5722;
+  font-size: 14px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 15px; /* Adds spacing between the buttons */
+}
+
+.buttons .btn {
+  padding: 10px 25px;
+  border: 2px solid; /* Adds a bold border */
+  border-radius: 5px;
+  background-color: transparent; /* Makes the button background transparent */
+  color: inherit; /* Inherits text color based on type */
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Adds smooth transition for hover effects */
+}
+
+/* Button Colors */
+.buttons .staff {
+  border-color: #ff5252; /* Red border */
+  color: #ff5252; /* Red text */
+}
+
+.buttons .intern {
+  border-color: #2196f3; /* Blue border */
+  color: #2196f3; /* Blue text */
+}
+
+.buttons .client {
+  border-color: #4caf50; /* Green border */
+  color: #4caf50; /* Green text */
+}
+
+/* Hover Effects */
+.buttons .btn:hover {
+  background-color: currentColor; /* Fills with text color on hover */
+  color: #ffffff; /* Text becomes white */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stacks sections vertically */
+  }
+
+  .left-section {
+    margin-left: 0; /* Resets the margin for smaller screens */
+    max-width: 100%; /* Takes full width */
+  }
+
+  .right-section {
+    margin-right: 0; /* Resets the margin for smaller screens */
+    max-width: 100%; /* Takes full width */
+    padding-left: 0;
+  }
+
+  .right-section h2 {
+    font-size: 24px;
+  }
+
+  .buttons .btn {
+    padding: 8px 16px;
   }
 }
 
