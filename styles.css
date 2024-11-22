@@ -250,6 +250,7 @@ body, ul, li {
     height: 400px;
   }
 }
+
 .hero {
   display: flex;
   justify-content: center;
@@ -389,7 +390,7 @@ body, ul, li {
   width: 100%;
   max-width: 100%; /* Ensures the image scales properly */
   height: auto;
-  border: 5px solid #fff;
+  border: 6px solid #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -464,12 +465,6 @@ body, ul, li {
 .buttons .client {
   border-color: #4caf50; /* Green border */
   color: #4caf50; /* Green text */
-}
-
-/* Hover Effects */
-.buttons .btn:hover {
-  background-color: currentColor; /* Fills with text color on hover */
-  color: #ffffff; /* Text becomes white */
 }
 
 /* Responsive Design */
@@ -585,6 +580,105 @@ body, ul, li {
 
   .left-side .service-box:after, .right-side .service-box:after {
     display: none;
+  }
+}
+
+/* SDLC Style Here */
+
+/* styles.css */
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.sdlc-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.accordion-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accordion-phase {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-phase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-header {
+  padding: 16px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.accordion-content {
+  padding: 16px 20px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.accordion-header-phase1 {
+  background-color: #3b82f6;
+}
+
+.accordion-header-phase2 {
+  background-color: #9333ea;
+}
+
+.accordion-header-phase3 {
+  background-color: #f97316;
+}
+
+.accordion-header-phase4 {
+  background-color: #10b981;
+}
+
+.accordion-header-phase5 {
+  background-color: #ec4899;
+}
+
+.accordion-header-phase6 {
+  background-color: #facc15;
+}
+
+.accordion-header-phase7 {
+  background-color: #0ea5e9;
+}
+
+.accordion-phase p {
+  margin: 0;
+}
+
+.accordion-content p {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .sdlc-title {
+    font-size: 2rem;
   }
 }
 
