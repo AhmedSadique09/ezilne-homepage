@@ -8,9 +8,37 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-// If on mobile, show the search bar below the "16th Anniversary" menu item when search icon is clicked
+
 searchIcon.addEventListener('click', () => {
   if (window.innerWidth <= 768) {
     searchBarContainer.style.display = 'block';
   }
 });
+
+// Slider JS Start Here
+
+let currentIndex = 0;
+
+function moveSlide(direction) {
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track img');
+  const totalSlides = slides.length;
+
+  currentIndex += direction;
+
+  // Loop through the slides
+  if (currentIndex < 0) {
+    currentIndex = totalSlides - 1; // Go to last slide
+  } else if (currentIndex >= totalSlides) {
+    currentIndex = 0; // Go to first slide
+  }
+
+  // Calculate the new position of the slider track
+  const slideWidth = slides[0].offsetWidth;
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+
+setInterval(() => {
+  moveSlide(1); 
+}, 5000); 
