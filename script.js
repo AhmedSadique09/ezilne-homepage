@@ -33,11 +33,9 @@ function moveSlide(direction) {
     currentIndex = 0; // Go to first slide
   }
 
-  // Calculate the new position of the slider track
   const slideWidth = slides[0].offsetWidth;
   track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
-
 
 setInterval(() => {
   moveSlide(1); 
